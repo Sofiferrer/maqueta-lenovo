@@ -1,16 +1,30 @@
-@media (min-width: 480px) and (max-width: 1024px)
+.products-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (min-width: 820px) and (max-width: 1024px)
+
+/*tablets landscape*/
+    {
+    body {
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 819px)
 
 /*tablets*/
     {
     body {
-        background-color: red;
+        font-size: 14px;
     }
 
     .nav-container a,
     span,
     input,
     button {
-        font-size: 0.6rem;
+        font-size: 1em;
     }
 
     .search-input {
@@ -18,21 +32,53 @@
     }
 
     .products-container {
-        background-color: aquamarine;
+        width: 100%;
+        margin: auto;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
-<<<<<<< HEAD
-=======
+    }
 
->>>>>>> 8dc2350678a95e545f2f03ffbda7681fd236f67f
+    .prod-price {
+        font-size: 1em;
     }
 }
-
 
 @media (min-width: 280px) and (max-width: 480px)
 
 /*celulares*/
     {
     body {
-        background-color: blue;
+        font-size: 10px;
+    }
+
+    .nav-container a,
+    span,
+    input,
+    button {
+        font-size: 1em;
+    }
+
+    .search-input {
+        margin-left: 20%;
+    }
+
+    /*.title-container {
+        flex-wrap: wrap;
+    }
+
+    .title-container h1,
+    span {
+        display: block;
+    }*/
+
+    .products-container {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prod-price {
+        font-size: 1em;
     }
 }
