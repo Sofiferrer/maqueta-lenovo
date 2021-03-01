@@ -1,113 +1,5 @@
+const products = getProducts();
 
-
-const products = [
-    {
-        img: "img/legionY520.jpeg",
-        name: "Legion Y520 15''",
-        span: "Crank up every setting to the max.",
-        price: "$729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-    },
-    {
-        img: "img/legionY920.jpeg",
-        name: "Legion Y920",
-        span: "Take your gaming to new levels.",
-        price: "$729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-
-    },
-    {
-        img: "img/legionY700.jpeg",
-        name: "Legion Y700 17''",
-        span: "Crank up every setting to the max.",
-        price: "$729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-    },
-    {
-        img: "img/ideaCentreY900.jpeg",
-        name: "IdeaCentre Y900 RE",
-        span: "Take your gaming to new levels.",
-        price: "729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-    },
-    {
-        img: "img/legionY520.jpeg",
-        name: "Legion Y520 15''",
-        span: "Crank up every setting to the max.",
-        price: "$729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-    },
-    {
-        img: "img/legionY920.jpeg",
-        name: "Legion Y920",
-        span: "Take your gaming to new levels.",
-        price: "$729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-
-    },
-    {
-        img: "img/legionY700.jpeg",
-        name: "Legion Y700 17''",
-        span: "Crank up every setting to the max.",
-        price: "$729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-    },
-    {
-        img: "img/ideaCentreY900.jpeg",
-        name: "IdeaCentre Y900 RE",
-        span: "Take your gaming to new levels.",
-        price: "729.99",
-        specs: {
-            Processor: "Intel Core i3",
-            OperatingSystem: "Windows 10 Profesional",
-            Memory: "16 GB RAM",
-            HardDrive: "512 GB SSD",
-            Graphics: "NVIDIA Graphics 4",
-        }
-    },
-]
 const createCards = () => {
     for (const product of products) {
         const container = document.getElementById('products-container');
@@ -145,7 +37,6 @@ const createCards = () => {
         prodCont.appendChild(buyButton);
 
         for (const spec in product.specs) {
-            console.log(product.specs[spec]);
             const specsCont = document.createElement('div');
             specsCont.setAttribute('class', 'specs-container');
 
@@ -179,3 +70,30 @@ const createCards = () => {
 
 createCards();
 
+const ham = document.querySelector(".ham");
+const menu = document.querySelector(".menu");
+const xIcon = document.querySelector(".fa-times");
+const menuIcon = document.querySelector(".fa-bars");
+
+const toggleMenu = () => {
+
+    if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        xIcon.style.display = "none";
+        menuIcon.style.display = "block";
+    } else {
+        menu.classList.add("showMenu");
+        xIcon.style.display = "block";
+        menuIcon.style.display = "none";
+    }
+}
+
+ham.addEventListener('click', toggleMenu);
+
+const navLinks = document.querySelectorAll(".nav-item");
+
+navLinks.forEach(
+    function (menuLink) {
+        menuLink.addEventListener("click", toggleMenu);
+    }
+)

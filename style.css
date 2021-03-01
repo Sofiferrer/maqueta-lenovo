@@ -29,10 +29,6 @@ body {
     display: inline;
 }
 
-.nav-container ul {
-    display: inline;
-}
-
 .nav-item {
     color: black;
     text-decoration: none;

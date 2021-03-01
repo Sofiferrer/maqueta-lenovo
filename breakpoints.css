@@ -1,3 +1,63 @@
+.ham {
+    display: none;
+}
+
+.nav-container ul {
+    display: inline;
+}
+
+.fa-times {
+    display: none;
+}
+
+.ham {
+    position: fixed;
+    z-index: 100;
+    top: auto;
+    left: 4em;
+    width: 2.5em;
+    height: 2.5em;
+    border: black solid 0.5px;
+    border-radius: 10%;
+    background: white;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: -1;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100vh;
+    background: rgb(62, 141, 221, 0.8);
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+}
+
+.menu-item {
+    display: block;
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+    margin-top: 4em;
+    text-align: right;
+    padding-right: 2em;
+}
+
+.menu li {
+    padding: 1em 0;
+}
+
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+
+.showMenu {
+    transform: translateY(0);
+}
+
 .products-container {
     grid-template-columns: repeat(4, 1fr);
 }
@@ -20,10 +80,20 @@
         font-size: 14px;
     }
 
-    .nav-container a,
-    span,
-    input,
-    button {
+    .nav-item {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .nav-container span,
+    input {
+        font-size: 1em;
+    }
+
+    .searchButton {
         font-size: 1em;
     }
 
@@ -35,7 +105,7 @@
         width: 100%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .prod-price {
@@ -43,7 +113,7 @@
     }
 }
 
-@media (min-width: 280px) and (max-width: 480px)
+@media (min-width: 200px) and (max-width: 480px)
 
 /*celulares*/
     {
@@ -51,10 +121,20 @@
         font-size: 10px;
     }
 
-    .nav-container a,
-    span,
-    input,
-    button {
+    .nav-container span,
+    input {
+        font-size: 1em;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .searchButton {
         font-size: 1em;
     }
 
@@ -62,14 +142,9 @@
         margin-left: 20%;
     }
 
-    /*.title-container {
-        flex-wrap: wrap;
+    .title-container h1 {
+        font-size: x-large;
     }
-
-    .title-container h1,
-    span {
-        display: block;
-    }*/
 
     .products-container {
         width: 100%;
