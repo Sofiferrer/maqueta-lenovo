@@ -1,0 +1,34 @@
+@media (min-width: 480px) and (max-width: 1024px)
+
+/*tablets*/
+    {
+    body {
+        background-color: red;
+    }
+
+    .nav-container a,
+    span,
+    input,
+    button {
+        font-size: 0.6rem;
+    }
+
+    .search-input {
+        margin-left: 20%;
+    }
+
+    .products-container {
+        background-color: aquamarine;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 280px) and (max-width: 480px)
+
+/*celulares*/
+    {
+    body {
+        background-color: blue;
+    }
+}
