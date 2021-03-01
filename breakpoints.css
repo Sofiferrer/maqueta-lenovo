@@ -20,6 +20,10 @@
     .products-container {
         background-color: aquamarine;
         grid-template-columns: repeat(2, 1fr);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8dc2350678a95e545f2f03ffbda7681fd236f67f
     }
 }
 
